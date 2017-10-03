@@ -74,7 +74,7 @@ var new_client = function(sdk_key, config) {
         }
         
         config.logger.error("[LaunchDarkly]", error);
-        client.emit('error') // AK - altered from launch darkly repository to handle errors
+        client.emit('connectError') // AK - altered from launch darkly repository to handle errors
       }
       else if (!init_complete) {
         init_complete = true;        
